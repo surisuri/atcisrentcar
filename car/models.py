@@ -1,0 +1,15 @@
+from django.db import models
+from django.utils import timezone
+
+class Car(models.Model):
+    number = models.CharField(max_length=15)
+    name = models.CharField(max_length=15)
+    remark = models.TextField()
+    created_date = models.DateTimeField( default=timezone.now)
+
+    def create(self):
+        self.created_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.number
