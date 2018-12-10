@@ -1,7 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/state.css' %}">
 <style>
 * {box-sizing: border-box;}
 
@@ -97,8 +102,23 @@ body {
 </div>
 
 <div style="padding-left:16px">
-  <h2>차량정보, 차량별 상태 ( 운행중 여부, 차량위치 )</h2>
   
+  
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for car in listcar %}
+                    <div class="post">
+                        <div class="date">
+                            <p>created: {{ car.created_date }}</p>
+                        </div>
+                        <h1><a href="">{{ car.number }}</a></h1>
+                        <p>{{ car.name | linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> 
 </div>
 
 </body>
