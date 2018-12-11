@@ -6,9 +6,8 @@
             <div class="date">
                 <p>created: {{ car.created_date }}</p>
             </div>
-            <h1><a href="">{{ car.number }}</a></h1>
-            
+            <h1><a href="{% url 'updatecar' pk=car.pk %}">{{ car.number }}</a></h1>
             <p>{{ car.name | linebreaksbr }}</p>
         </div>
     {% endfor %}
-{% endblock %}    
+{% endblock %}
