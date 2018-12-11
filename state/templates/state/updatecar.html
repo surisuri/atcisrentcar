@@ -15,14 +15,14 @@
     
             var mapOptions = { 
                 zoom : 16,
-                center : new google.maps.LatLng(37.5651, 126.98955), // 지도 중앙 위치
+                center : new google.maps.LatLng(37.5651, 126.98955), 
                 scrollwheel : true, 
                 mapTypeControl : false
             };
     
-            map = new google.maps.Map(document.getElementById('google_map'), mapOptions); //구글 맵을 사용할 타겟
+            map = new google.maps.Map(document.getElementById('google_map'), mapOptions); 
             
-            var image = 'https://cheolguso.com/img/iconimg.png'; //마커 이미지 설정
+            var image = 'https://cheolguso.com/img/iconimg.png'; 
     
             var marker = new google.maps.Marker({ 
                 map : map,
@@ -38,7 +38,7 @@
     
         }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHBlMzgbZQzntF3QsdbyH4whBXJEImAW4&callback=initialize" async defer></script>            
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_60dMlXEr9iaeq_00k-WRv6fi0viDu3M&callback=initialize" async defer></script>            
 
     {% for car in listcar %}
         <div class="post">
