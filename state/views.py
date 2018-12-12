@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from car.models import Car
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from .models import State
+from car.models import Car
 
 def listcar(request):
-    listcar = Car.objects.order_by('created_date')
+    listcar = State.objects.order_by('created_date')
     return render(request, 'state/listcar.html', {'listcar': listcar})
 
 @login_required
